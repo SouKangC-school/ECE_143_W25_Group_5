@@ -12,6 +12,10 @@ from sklearn.cluster import KMeans
 
 
 def draw_speed_distribution_with_fit(data, min_speed=0, max_speed=90,type="Run"):
+    '''
+    Draw the speed distribution with normal fit
+    '''
+    assert min_speed < max_speed, "min_speed should be less than max_speed"
     avg_speed = []
     for record in data:
         length = len(record["speed"])
@@ -48,6 +52,9 @@ def draw_speed_distribution_with_fit(data, min_speed=0, max_speed=90,type="Run")
 
 
 def remove_abnormal_speed_heartrate(_df):
+    '''
+    Remove abnormal speed and heart rate data
+    '''
     _df = _df[(_df['speed'] <= 20) & (_df['speed'] > 5) & (_df['heart_rate'] > 30)]
     return _df
 
@@ -85,6 +92,9 @@ def prediction_and_plot(_df,n=50000):
 
 
 def read_all_fit_files(folder_path):
+    '''
+    Read all fit files in the folder
+    '''
     record_dict = defaultdict(dict)
     for filename in os.listdir(folder_path):
         if filename.endswith('.fit'):
@@ -121,6 +131,9 @@ def read_all_fit_files(folder_path):
 
 
 def draw_random_samples_plot(_df, n_samples=100):
+    '''
+    Draw random samples plot
+    '''
     plt.figure(figsize=(10, 6))
     df_male = _df[_df['gender'] == 'male']
     df_female = _df[_df['gender'] == 'female']
@@ -182,7 +195,10 @@ def prediction_and_plot(_df,n=50000):
     plt.show()
 
 def basemodel_plot():
-    run_data = np.load("raw_run_data.npy",allow_pickle=True)
+    '''
+    Draw the base model plot
+    '''
+    run_data = np.load("../raw_run_data.npy",allow_pickle=True)
     run_df = pd.DataFrame(list(run_data))
     def pre_handle(df):
         """
@@ -219,6 +235,9 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 
 def classify_users_by_performance(data_list,speed_threshold=12 ,n_clusters=3):
+    '''
+    Classify users by performance
+    '''
     user_features = []
 
     for user_data in data_list:
@@ -278,7 +297,10 @@ def classify_users_by_performance(data_list,speed_threshold=12 ,n_clusters=3):
 
 
 def performance_classification_plot():
-    data = np.load("run_data_with_proper_interpolate.npy",allow_pickle=True)
+    '''
+    Draw the performance classification plot
+    '''
+    data = np.load("../run_data_with_proper_interpolate.npy",allow_pickle=True)
     classified_users, user_details = classify_users_by_performance(data, speed_threshold=11.6)
     high_performance_users = np.array(classified_users['High'])
     hp_id_map = {user[0]: user for user in high_performance_users}
@@ -398,6 +420,9 @@ def performance_classification_plot():
         draw_speed_distribution_with_fit(p_data,min_speed=6,max_speed=24, type=f"{level} Performance Users")
 
 def draw_performance_indicator_comparison(M_male,M_female,label_male,label_female,speed_level):
+    '''
+    Draw the performance indicator comparison
+    '''
     categories = ["High", "Moderate", "Low"]
     x = np.arange(len(categories))
     bar_width = 0.3
@@ -415,6 +440,9 @@ def draw_performance_indicator_comparison(M_male,M_female,label_male,label_femal
     plt.show()
 
 def runner_indicator_plot():
+    '''
+    Draw the runner indicator plot
+    '''
     slope_male_10_14 = np.array([1.86, 2.2, 2.32])
     slope_male_14_16 = np.array([0.81, 1.23, 1.90])
     slope_female_9_12 = np.array([2.08, 2.51, 2.52])

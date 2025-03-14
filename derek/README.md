@@ -1,4 +1,4 @@
-# README
+# Heart Rate and Speed Correlation Analysis
 
 ## Overview
 `Main.py` processes running workout data for both male and female participants, categorizing their maximum speeds and analyzing corresponding heart rate data. The results are plotted through histograms to provide insights into heart rate distribution at different speed ranges with other visualizations provided in `BinsToHeartrate.py` given the data from `Main.py`.

@@ -131,8 +131,7 @@ Each team member's directory contains specific instructions for running their po
 ### Derek's Analysis
 ```bash
 cd derek
-python Main.py
-python BinsToHeartrate.py
+jupyter notebook Plots.ipynb
 ```
 
 ### Jerry's Analysis
@@ -144,6 +143,10 @@ jupyter notebook plot.ipynb
 ### Jinshi's Analysis
 ```bash
 cd jinshi_he
+# For jupyter notebooks
+jupyter notebook notebooks/categorical_data_analysis.ipynb
+jupyter notebook notebooks/LSTM_model.ipynb
+
 # For categorical analysis:
 python run_analysis.py --data path/to/data_shrunk.npy --analysis categorical
 

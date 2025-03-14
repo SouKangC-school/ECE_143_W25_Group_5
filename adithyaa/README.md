@@ -1,4 +1,4 @@
-**Focus Area**: Exercise Frequrency vs Heart Rate Correlation
+**Focus Area**: Exercise Frequency vs Heart Rate Correlation
 
 Adithyaa's work focussed on the correlation between exercise frequency and heart rate. He performed the analysis for both biking and running. 
 The analysis was done using K-Means Clustering Algorithm.

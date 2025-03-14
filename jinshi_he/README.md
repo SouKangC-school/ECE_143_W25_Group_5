@@ -1,11 +1,11 @@
-# Workout Analysis and Heart Rate Prediction
+# Workout Categorical Analysis and Heart Rate Prediction by Jinshi He
 
 This project provides tools for analyzing workout data and training models to predict heart rate based on time series data.
 
 ## Project Structure
 
 ```
-workout_analysis/
+jinshi_he/
 ├── notebooks/                # Original Jupyter notebooks
 │   ├── categorical_data_analysis.ipynb   # Original workout analysis notebook
 │   └── LSTM_model.ipynb      # Original LSTM model notebook

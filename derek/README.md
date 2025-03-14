@@ -20,16 +20,17 @@ These files contain structured datasets from the FitRec project website with the
 - `tar_heart_rate`: An array of corresponding heart rate values.
 
 ## Processing Workflow
-1. Load male and female workout data in `DataScrub.py`.
-2. Extract speed and heart rate values, ignoring the first and last 10% of data to remove anomalies.
-3. Categorize the maximum speed values into predefined bins:
+1. Download the `processed_endomondoHR_proper_interpolate.npy` from `https://sites.google.com/view/fitrec-project/`
+2. Load male and female workout data in `DataScrub.py`.
+3. Extract speed and heart rate values, ignoring the first and last 10% of data to remove anomalies.
+4. Categorize the maximum speed values into predefined bins:
    - `<10 km/h`
    - `10-12 km/h`
    - `12-14 km/h`
    - `14-16 km/h`
    - `>16 km/h`
-4. Store corresponding maximum heart rate values in a dictionary for each speed category.
-5. Visualize the distribution of heart rates for each speed category using histograms.
+5. Store corresponding maximum heart rate values in a dictionary for each speed category.
+6. Visualize the distribution of heart rates for each speed category using histograms.
 
 ## Functions
 ### `plot_multiple_histograms(speeds_to_hr, gender)`

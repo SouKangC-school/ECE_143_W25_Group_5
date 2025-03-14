@@ -1,4 +1,4 @@
-# ECE_143_W25_Group_5 
+# Workout Data Analysis and Heart Rate Prediction
 
 This repository contains a comprehensive analysis of workout data, focusing on heart rate patterns, speed correlations, and predictive modeling for fitness applications. Our team has explored various aspects of the FitRec dataset to derive meaningful insights and develop predictive models.
 
@@ -22,6 +22,11 @@ The repository is organized into four main directories, each containing work fro
 
 ```
 repository/
+├── adithyaa/                 # Adithyaa Venkatasubramanian's work
+│   ├── Bike Exercise Frequency vs Performance.png
+│   ├── ECE143_Project_final.py
+│   ├── README.md
+│   └── Run Exercise Frequency vs Performance.png
 ├── derek/                    # Derek Jensen's work
 │   ├── BinsToHeartrate.py
 │   ├── DataScrub.py
@@ -54,6 +59,15 @@ repository/
 ```
 
 ## Team Members and Contributions
+
+### Adithyaa Venkatasubramanian
+**Focus Area**: Exercise Frequency vs Heart Rate Correlation
+
+Adithyaa's work focused on the correlation between exercise frequency and heart rate. He performed the analysis for both biking and running activities using K-Means Clustering Algorithm.
+
+**Key Files**:
+- `ECE143_Project_final.py`: Main script for performing K-Means clustering analysis
+- Visualization outputs for biking and running correlations
 
 ### Derek Jensen
 **Focus Area**: Heart Rate and Speed Correlation Analysis
@@ -128,10 +142,17 @@ Soumil's contribution involves identifying correlated variables in the dataset a
 
 Each team member's directory contains specific instructions for running their portion of the analysis. Here's a quick overview:
 
+### Adithyaa's Analysis
+```bash
+cd adithyaa
+python ECE143_Project_final.py
+```
+
 ### Derek's Analysis
 ```bash
 cd derek
-jupyter notebook Plots.ipynb
+python Main.py
+python BinsToHeartrate.py
 ```
 
 ### Jerry's Analysis
@@ -174,6 +195,7 @@ This project provides several key insights:
 - Performance classification of runners based on their data
 - Effective models for heart rate prediction using time-series data
 - Gender-based differences in workout performance metrics
+- Relationship between exercise frequency and heart rate for different activity types
 
 ## License
 

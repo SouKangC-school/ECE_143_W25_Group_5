@@ -1,3 +1,7 @@
+import os
+from fitparse import FitFile
+from collections import defaultdict
+
 def read_all_fit_files(folder_path):
     '''
     Read all fit files in the folder

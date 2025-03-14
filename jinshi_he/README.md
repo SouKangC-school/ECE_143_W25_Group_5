@@ -146,16 +146,6 @@ Using the modular code:
 python train_model.py --model lstm --data data/data_shrunk.npy --seq_length 20 --pred_horizon 3 --hidden_size 64 --epochs 100 --batch_size 128
 ```
 
-## Development Approach
-
-This project demonstrates two complementary development approaches:
-
-1. **Exploratory Analysis and Model Development** (Jupyter notebooks): Perfect for data exploration, visualization, and iterative model development with immediate feedback.
-
-2. **Modular Software Design** (Python modules): Better for production code, maintainability, reusability, and extensibility.
-
-By including both, this project provides both the interactive exploration experience and a clean, modular codebase for production use.
-
 ## License
 
 This project is licensed under the MIT License.
